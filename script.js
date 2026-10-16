@@ -10,132 +10,132 @@ const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 // ---------- Project data ----------
 const PROJECTS = [
-  { cat: "apps", tag: "Client app", icon: "🛠️", grad: "t1",
+  { cat: "apps", tag: "Client App", icon: "🛠️", grad: "t1",
     title: "Kolors: Die & Tool Tracking",
-    desc: "Web app for Konnekt India Pvt. Ltd. that tracks dies, parts and production in a manufacturing workshop.",
+    desc: "I built this web app for a manufacturing company to track dies, parts and production in their workshop.",
     points: [
-      "Separate Admin and Workshop logins, with English and Hindi interface.",
-      "New die entry with Excel/CSV import for plates, parts and child parts.",
-      "Project scheduling, employee and machine/shift management.",
-      "Work progress entry per machine, die, plate, part and employee.",
-      "Outsourcing to vendors with status tracking, and a die tracker by project ID."
+      "I made separate Admin and Workshop logins, with an English and Hindi interface.",
+      "I added new die entry with Excel/CSV import for plates, parts and child parts.",
+      "I built project scheduling, plus employee and machine/shift management.",
+      "I added work progress entry per machine, die, plate, part and employee.",
+      "I built outsourcing to vendors with status tracking, and a die tracker by project ID."
     ],
-    stack: ["Web app", "Excel/CSV import", "Cloudflare Pages"], link: "https://kolors.pages.dev" },
-  { cat: "apps", tag: "Client app", icon: "👗", grad: "t2",
+    stack: ["Web App", "Excel/CSV Import", "Cloudflare Pages"], link: "https://kolors.pages.dev" },
+  { cat: "apps", tag: "Client App", icon: "👗", grad: "t2",
     title: "Bansi Fashion App",
-    desc: "Web app built for Bansi Fashion and hosted on Cloudflare Pages.",
+    desc: "I developed this web app for Bansi Fashion and deployed it on Cloudflare Pages.",
     points: [
-      "Built and delivered end to end for the client.",
-      "Deployed on Cloudflare Pages for fast, always-on access."
+      "I built and delivered it end to end for the client.",
+      "I deployed it on Cloudflare Pages for fast, always-on access."
     ],
-    stack: ["Web app", "Cloudflare Pages"], link: "https://bansifashion.pages.dev" },
+    stack: ["Web App", "Cloudflare Pages"], link: "https://bansifashion.pages.dev" },
 
   { cat: "trading", tag: "Trading", icon: "📈", grad: "t3",
     title: "Options Backtesting Engine",
-    desc: "High-performance engine for multi-year NIFTY, BANKNIFTY and SENSEX options strategies.",
+    desc: "I built a high-performance engine that tests trading strategies on multi-year market datasets.",
     points: [
-      "Built with Polars and Pandas for speed on very large datasets.",
-      "Dynamic stop-loss logic, ITM/OTM strike selection and PnL computation.",
-      "Automated numeric and date corrections so results stay accurate.",
-      "Lets complex strategies be compared across different market conditions."
+      "I used Polars and Pandas to keep it fast on very large datasets.",
+      "It supports dynamic stop-loss logic, strike selection rules and PnL computation.",
+      "I automated numeric and date corrections so results stay accurate.",
+      "It lets me compare complex strategies across different market conditions."
     ],
     stack: ["Python", "Polars", "Pandas"] },
   { cat: "trading", tag: "Live", icon: "📡", grad: "t4",
     title: "Live Dashboard: Paper vs Actual",
-    desc: "Live trading dashboard that compares each strategy's paper results with actual live fills.",
+    desc: "I built a live trading dashboard that compares each strategy's paper results with actual live fills.",
     points: [
-      "Open positions, tradebook and paper views, with a light/dark theme.",
-      "Bulk StopLimit and Limit order panels (NWTR and Overall) listing open legs.",
-      "Generates an end-of-day ZIP with one CSV per client.",
-      "Reads each strategy engine's JSON state, so restarting the dashboard never affects a running engine."
+      "It shows open positions, tradebook and paper views, with a light and dark theme.",
+      "I added bulk StopLimit and Limit order panels that list open legs.",
+      "It generates an end-of-day ZIP with one CSV per client.",
+      "It reads each strategy engine's JSON state, so restarting the dashboard never affects a running engine."
     ],
-    stack: ["Flask", "Dhan API", "JSON state"], link: "https://livedashboard.successure.in" },
+    stack: ["Flask", "Broker API", "JSON State"], link: "https://livedashboard.successure.in" },
   { cat: "trading", tag: "Reports", icon: "📊", grad: "t5",
     title: "All-Strategy Dashboards Hub",
-    desc: "Launcher for 12 daily strategy and reporting dashboards, each on its own subdomain.",
+    desc: "I created one launcher for 12 daily strategy and reporting dashboards, each on its own subdomain.",
     points: [
-      "Strategy dashboards: DY, IndexMove, TIO, SNX_TIO, NWTR, TO Combined, MWCT, BSTR and WK_C.",
-      "COST dashboard for code-wise cost and brokerage analysis.",
-      "Trade Files Mail Generator that builds and mails client trade files.",
-      "Monthly Employee Report for attendance and work duration."
+      "It links to a dashboard for every live and backtested strategy.",
+      "I built a cost dashboard for code-wise cost and brokerage analysis.",
+      "I built a trade-files mail generator that creates and mails client trade files.",
+      "I added a monthly employee report for attendance and work duration."
     ],
-    stack: ["Flask", "JavaScript", "Excel export", "Email"], link: "https://dashboards.successure.in" },
+    stack: ["Flask", "JavaScript", "Excel Export", "Email"], link: "https://dashboards.successure.in" },
   { cat: "trading", tag: "Live", icon: "🔍", grad: "t6",
     title: "MTF Dashboard & Screener",
-    desc: "India MTF dashboard with Dashboard, Trends and Screener views.",
+    desc: "I built an India MTF dashboard with Dashboard, Trends and Screener views.",
     points: [
-      "Runs on its own port, separate from live trading screens.",
-      "Screener sorts and filters thousands of stocks per request.",
-      "Nightly fetch and build pipeline writes Parquet data, with a light/dark theme."
+      "I run it on its own port, separate from the live trading screens.",
+      "The screener sorts and filters thousands of stocks per request.",
+      "A nightly fetch and build pipeline writes Parquet data for it."
     ],
     stack: ["Flask", "Parquet", "Polars"], link: "https://mtf.successure.in" },
   { cat: "trading", tag: "Live", icon: "🔔", grad: "t7",
     title: "Live Stock Watch & Alerts",
-    desc: "Price-alert dashboard for NSE equities and futures with percent-change alerts.",
+    desc: "I built a price-alert dashboard for NSE equities and futures with percent-change alerts.",
     points: [
-      "Equity, Futures and Stock views with an equity-vs-futures difference table.",
-      "Stock-wise alert setup from a chosen base price (open, previous close, LTP, high, low or manual).",
-      "Alert log with date filters and Excel export, plus optional voice alerts.",
-      "Feed runs on a schedule with a watchdog, built on the Dhan market feed."
+      "It has Equity, Futures and Stock views, with an equity-vs-futures difference table.",
+      "I added stock-wise alerts from a chosen base price (open, previous close, LTP, high, low or manual).",
+      "It keeps an alert log with date filters and Excel export, plus optional voice alerts.",
+      "The feed runs on a schedule with a watchdog, on top of a broker market feed."
     ],
-    stack: ["Dhan MarketFeed", "Polars", "Alerts", "Excel export"], link: "https://stocks.successure.in" },
+    stack: ["Market Feed", "Polars", "Alerts", "Excel Export"], link: "https://stocks.successure.in" },
   { cat: "trading", tag: "Live", icon: "🖥️", grad: "t8",
     title: "Sector Futures/Cash Dashboard",
-    desc: "Live sector-wise futures and cash view driven by an Excel watchlist.",
+    desc: "I built a live sector-wise futures and cash view driven by an Excel watchlist.",
     points: [
-      "FastAPI backend and Vite frontend.",
-      "Quotes from the broker REST API, so no WebSocket connection limits.",
-      "Watchlist and sectors read from an Excel sheet."
+      "I wrote the backend in FastAPI and the frontend in Vite.",
+      "I used the broker REST API for quotes, so there are no WebSocket connection limits.",
+      "The watchlist and sectors come from an Excel sheet."
     ],
     stack: ["FastAPI", "Vite", "REST"], link: "https://ms.successure.in" },
   { cat: "trading", tag: "Live", icon: "📉", grad: "t9",
     title: "Live Charts & Option Chain",
-    desc: "Live charting and option-chain platform for NIFTY, BANKNIFTY, SENSEX and VIX.",
+    desc: "I built a live charting and option-chain platform for indices, stocks and volatility.",
     points: [
-      "Candles from 1 minute to daily, with ranges from 1 day to all history and a split view.",
-      "Option chain with call and put OI and LTP by strike, for weekly, next weekly and monthly expiries.",
-      "Total premium panel for calls and puts, and a go-to date and time jump.",
-      "Equity and futures modes with OHLC readouts."
+      "Candles run from 1 minute to daily, with ranges from 1 day to all history and a split view.",
+      "The option chain shows call and put OI and LTP by strike for weekly, next weekly and monthly expiries.",
+      "I added a total premium panel for calls and puts, and a go-to date and time jump.",
+      "It has equity and futures modes with OHLC readouts."
     ],
-    stack: ["JavaScript", "Charts", "Option chain", "Feed server"], link: "https://LiveCharts.successure.in" },
+    stack: ["JavaScript", "Charts", "Option Chain", "Feed Server"], link: "https://LiveCharts.successure.in" },
   { cat: "trading", tag: "Analytics", icon: "🎯", grad: "t1",
     title: "Zero Gamma Level (GEX) Tracker",
-    desc: "Computes gamma exposure and the zero-gamma level for the index from option chain data.",
+    desc: "I built a tracker that computes gamma exposure and the zero-gamma level from live option chain data.",
     points: [
-      "Collects option chain data every minute.",
-      "Backfills missing minutes from historical 1-minute candles.",
-      "Live chart with previous-day levels."
+      "It collects option chain data every minute.",
+      "It backfills missing minutes from historical 1-minute candles.",
+      "It draws a live chart with previous-day levels."
     ],
-    stack: ["Python", "Options", "Kite API"] },
+    stack: ["Python", "Options", "Broker API"] },
   { cat: "trading", tag: "Analytics", icon: "🧱", grad: "t2",
     title: "Order-Block & Liquidity Scanner",
-    desc: "Minute-by-minute scan of about 400 F&O stocks for order-block setups.",
+    desc: "I built a scanner that checks about 400 F&O stocks every minute for order-block setups.",
     points: [
       "One quote call per minute turns into snapshots, bars, scores and sector boards.",
-      "Per-stock popup charts with zones and levels."
+      "I added per-stock popup charts with zones and levels."
     ],
-    stack: ["Python", "Kite API"] },
+    stack: ["Python", "Broker API"] },
   { cat: "trading", tag: "Data", icon: "⚡", grad: "t3",
     title: "Market Data Pipelines",
-    desc: "Historical and live collection of index, futures and option chain data.",
+    desc: "I built pipelines that collect historical and live equity, futures and option chain data.",
     points: [
-      "Kite and Dhan APIs, including WebSockets and instrument ID mapping.",
-      "Stored in MySQL and converted to Parquet for fast analysis.",
-      "End-of-day file generation."
+      "I connected broker APIs and WebSockets, with instrument ID mapping.",
+      "I store the data in MySQL and convert it to Parquet for fast analysis.",
+      "I also generate end-of-day files."
     ],
-    stack: ["Kite API", "Dhan API", "MySQL", "Parquet"] },
+    stack: ["Broker APIs", "MySQL", "Parquet"] },
 
   { cat: "ml", tag: "ML", icon: "🌿", grad: "t7",
     title: "LAI Estimation, Hyperspectral Data",
-    desc: "Leaf area index estimation from vegetation indices.",
+    desc: "I estimated leaf area index from vegetation indices using hyperspectral data.",
     points: [
-      "Compared XGBoost, Linear Regression, Random Forest, SVR and KNN.",
-      "Best model KNN: R² 0.87, RMSE 0.3436, MAE 0.2250."
+      "I compared XGBoost, Linear Regression, Random Forest, SVR and KNN.",
+      "The best model was KNN: R² 0.87, RMSE 0.3436, MAE 0.2250."
     ],
     stack: ["Scikit-Learn", "XGBoost"] },
-  { cat: "ml", tag: "Deep learning", icon: "🥭", grad: "t8",
+  { cat: "ml", tag: "Deep Learning", icon: "🥭", grad: "t8",
     title: "Mango Leaf & Landmark Detection",
-    desc: "Two image classification projects built with CNNs.",
+    desc: "I trained CNN models for two image classification projects.",
     points: [
       "Mango leaf disease: 4,000 images in 8 classes, 0.93 test accuracy.",
       "Landmark detection: 20,001 samples across 1,020 classes."
@@ -143,8 +143,8 @@ const PROJECTS = [
     stack: ["Keras", "OpenCV", "NumPy"] },
   { cat: "ml", tag: "BI", icon: "👥", grad: "t6",
     title: "HR Analytics Dashboard",
-    desc: "Power BI dashboard for data-driven HR decisions.",
-    points: ["Exploratory data analysis and interactive visual design.", "Helps decision makers read HR data quickly."],
+    desc: "I built a Power BI dashboard for data-driven HR decisions.",
+    points: ["I did the exploratory data analysis and the interactive visual design.", "It helps decision makers read HR data quickly."],
     stack: ["Power BI", "EDA"] }
 ];
 
@@ -189,7 +189,7 @@ modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
 addEventListener("keydown", e => { if (e.key === "Escape" && !modal.hidden) closeModal(); });
 
 // ---------- Typing effect ----------
-const words = ["Financial Data Analyst", "Options Backtesting Engineer", "Full-Stack Dashboard Developer", "Python & Polars Developer"];
+const words = ["Financial Data Analyst", "Backtesting Engineer", "Full-Stack Developer", "Dashboard Builder"];
 const typed = $("#typed");
 let w = 0, c = 0, del = false;
 (function tick() {
