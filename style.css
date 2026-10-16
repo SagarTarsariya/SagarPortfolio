@@ -18,7 +18,10 @@ section{padding:84px 0}
 .progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));z-index:100}
 
 .nav{position:fixed;inset:0 0 auto 0;height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 max(20px,calc((100vw - 1120px)/2 + 20px));background:var(--nav);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);z-index:50}
-.logo{font-weight:800;letter-spacing:.08em}.logo span{color:var(--accent2)}
+.logo{font-weight:800;font-size:1.25rem;letter-spacing:.01em;display:flex;align-items:center;gap:8px}.logo span{color:var(--accent2)}
+.wave{width:26px;height:26px;fill:none;stroke:var(--accent2);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.logo:hover .wave path{animation:wave 1s ease-in-out infinite alternate}.logo:hover .wave path:nth-child(2){animation-delay:.15s}.logo:hover .wave path:nth-child(3){animation-delay:.3s}
+@keyframes wave{to{transform:translateX(3px)}}
 .nav nav{display:flex;gap:6px;font-size:.92rem;color:var(--muted)}
 .nav nav a{padding:6px 12px;border-radius:999px;transition:.2s}
 .nav nav a:hover,.nav nav a.active{color:var(--text);background:rgba(109,93,252,.16)}
@@ -160,3 +163,6 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:v
   .nav nav a{padding:12px 0;border-radius:0}
 }
 @media (max-width:600px){.grid.projects{grid-template-columns:1fr}}
+
+.avatar{padding:0;overflow:hidden;display:block;background:#fff;border-width:2px}
+.avatar img{display:block;width:100%;height:100%;object-fit:cover}
